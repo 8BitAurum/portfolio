@@ -1,0 +1,61 @@
+@import "tailwindcss";
+
+/* Light Theme Variables */
+:root {
+    --background: #f8fafc;
+    --foreground: #0f172a;
+
+    --accent-primary: #4f46e5; /* Indigo 600 */
+    --accent-secondary: #9333ea; /* Purple 600 */
+    --accent-tertiary: #6366f1; /* Indigo 500 */
+
+    --primary-foreground: #ffffff;
+
+    /* Glassmorphism backgrounds for light theme */
+    --glass-bg: rgba(255, 255, 255, 0.7);
+    --glass-border: rgba(15, 23, 42, 0.08);
+}
+
+/* Dark Theme Variables via next-themes class */
+html.dark {
+    --background: #09090e; /* Deep very dark blue/purple */
+    --foreground: #f8fafc;
+
+    --accent-primary: #818cf8; /* Indigo 400 */
+    --accent-secondary: #c084fc; /* Purple 400 */
+    --accent-tertiary: #a78bfa; /* Violet 400 */
+
+    --primary-foreground: #0f172a;
+
+    /* Glassmorphism backgrounds for dark theme */
+    --glass-bg: rgba(20, 20, 30, 0.6);
+    --glass-border: rgba(255, 255, 255, 0.08);
+}
+
+@theme inline {
+    --color-background: var(--background);
+    --color-foreground: var(--foreground);
+    --font-sans: var(--font-inter);
+    --font-mono: var(--font-mono-custom);
+
+    --color-accent-primary: var(--accent-primary);
+    --color-accent-secondary: var(--accent-secondary);
+    --color-accent-tertiary: var(--accent-tertiary);
+
+    --color-glass-bg: var(--glass-bg);
+    --color-glass-border: var(--glass-border);
+}
+
+body {
+    background-color: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-sans), sans-serif;
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease;
+}
+
+/* Base custom utility for smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
